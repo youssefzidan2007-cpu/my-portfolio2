@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Youssef Ahmed | MS Office | Accounting Student</title>
+  <meta name="description" content="Portfolio of Youssef Ahmed, an accounting student skilled in MS Office, financial reporting, and financial analysis with Excel, Power BI, and SQL.">
+  <meta name="theme-color" content="#0b1524">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= Navigation ================= -->
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main">
+      <a class="brand" href="#home">Youssef<span>.</span>Ahmed</a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">
+      <label for="nav-toggle" class="nav-burger" aria-hidden="true"><span></span></label>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ================= Home ================= -->
+    <section class="hero" id="home">
+      <div class="wrap hero-inner">
+        <h1>Youssef Ahmed</h1>
+        <p class="role">MS Office | Accounting Student</p>
+        <p class="tagline">Focusing on core accounting principles, financial reporting, and practical data analysis to drive business accuracy.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View my projects</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= About ================= -->
+    <section id="about">
+      <div class="wrap about-grid">
+        <h2>About me</h2>
+
+        <div class="about-copy">
+          <p>I'm an accounting student at the Faculty of Commerce with a strong grounding in core accounting principles and the Microsoft Office tools used every day in the profession.</p>
+          <p>My studies cover how transactions are recorded, summarised into financial statements, and checked for accuracy. I blend that foundation with advanced Excel, Power BI, and SQL, so I can organise records, analyse results, and present them clearly.</p>
+          <p>I'm looking for internships and entry-level accounting roles where precision and dependable reporting matter.</p>
+
+          <dl class="facts">
+            <div><dt>Studying</dt><dd>Accounting, Faculty of Commerce</dd></div>
+            <div><dt>Focus</dt><dd>Financial reporting and analysis</dd></div>
+            <div><dt>Core tools</dt><dd>Excel, Power BI, SQL</dd></div>
+            <div><dt>Open to</dt><dd>Internships &amp; junior roles</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Skills ================= -->
+    <section class="skills" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Skills</h2>
+          <p>A foundation in accounting, backed by the Office and data tools used to put it into practice.</p>
+        </div>
+
+        <div class="skill-grid">
+          <div class="skill-group">
+            <h3>Accounting</h3>
+            <ul>
+              <li><strong>Financial accounting</strong> and double-entry bookkeeping</li>
+              <li><strong>Cost accounting</strong> and cost analysis</li>
+              <li><strong>General ledger</strong> and journal entries</li>
+              <li><strong>Financial statements</strong> preparation and analysis</li>
+              <li><strong>Tax basics</strong> and accounting for taxes</li>
+              <li><strong>Audit basics</strong> and account reconciliation</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>MS Office</h3>
+            <ul>
+              <li><strong>Advanced Excel</strong> with formulas, lookups, and charts</li>
+              <li><strong>PivotTables</strong> for summarising accounting data</li>
+              <li><strong>Word</strong> for financial reports and formal documents</li>
+              <li><strong>PowerPoint</strong> for clear presentations of results</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Data Tools</h3>
+            <ul>
+              <li><strong>Power BI</strong> dashboards and reports</li>
+              <li><strong>SQL</strong> for querying accounting records</li>
+              <li><strong>Data cleaning</strong> and validation</li>
+              <li><strong>Documentation</strong> of methods and results</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Projects (data comes from the backend) ================= -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="projects-head">
+          <div class="section-head">
+            <h2>Projects</h2>
+            <p>Accounting and analysis work, with the Excel files attached so you can open and review them.</p>
+          </div>
+
+          <div class="admin-tools" id="admin-tools" hidden>
+            <button type="button" class="btn btn-primary" id="open-add-project" aria-haspopup="dialog">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              Add project
+            </button>
+          </div>
+        </div>
+
+        <p class="sr-only" id="project-status" role="status" aria-live="polite"></p>
+
+        <div class="empty-state" id="project-message" hidden></div>
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <h2>Let's work together</h2>
+          <p>Have an internship, a project, or a question about my work? Send me a message and I'll reply as soon as I can.</p>
+          <a class="btn btn-primary" href="mailto:ya5521138@gmail.com">Send an email</a>
+        </div>
+
+        <ul class="contact-list">
+          <li>
+            <a href="mailto:ya5521138@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <div><span>Email</span><strong>ya5521138@gmail.com</strong></div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/youssef-ahmed-1641b438a?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.75h4v11.5H3V9.75Zm6.5 0h3.83v1.57h.05c.53-1 1.84-2.07 3.79-2.07 4.05 0 4.8 2.66 4.8 6.13v5.87h-4v-5.2c0-1.24-.02-2.83-1.73-2.83-1.73 0-2 1.35-2 2.74v5.29h-4V9.75Z"/></svg>
+              <div><span>LinkedIn</span><strong>linkedin.com/in/youssef-ahmed-1641b438a</strong></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>&copy; 2026 Youssef Ahmed</span>
+      <div class="footer-actions">
+        <span class="admin-badge" id="admin-badge" hidden>Admin mode</span>
+        <button type="button" class="link-btn" id="admin-toggle">Admin sign in</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= Admin sign-in dialog ================= -->
+  <dialog class="modal dialog-small" id="login-dialog" aria-labelledby="login-title">
+    <form id="login-form" method="dialog" novalidate>
+      <div>
+        <h3 id="login-title">Admin sign in</h3>
+        <p class="modal-note">Only the site owner can add or remove projects.</p>
+      </div>
+
+      <div class="field">
+        <label for="l-password">Password</label>
+        <input id="l-password" name="password" type="password" autocomplete="current-password" required>
+      </div>
+
+      <p class="form-error" id="login-error" role="alert"></p>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-ghost" id="login-cancel">Cancel</button>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+      </div>
+    </form>
+  </dialog>
+
+  <!-- ================= Add project dialog ================= -->
+  <dialog class="modal" id="project-dialog" aria-labelledby="dialog-title">
+    <form id="project-form" method="dialog" novalidate>
+      <div>
+        <h3 id="dialog-title">Add a project</h3>
+        <p class="modal-note">It is saved on the server and appears for every visitor.</p>
+      </div>
+
+      <div class="field">
+        <label for="p-title">Project title</label>
+        <input id="p-title" name="title" type="text" maxlength="100" required autocomplete="off" placeholder="e.g. Budget vs Actual Report">
+      </div>
+
+      <div class="field">
+        <label for="p-desc">Description</label>
+        <textarea id="p-desc" name="description" maxlength="600" required placeholder="What did you build, and what did it show?"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="p-tags">Tags <span class="hint">(separate with commas)</span></label>
+        <input id="p-tags" name="tags" type="text" autocomplete="off" placeholder="Excel, PivotTables, Cost accounting">
+      </div>
+
+      <div class="field">
+        <label for="p-link">Project link <span class="hint">(optional)</span></label>
+        <input id="p-link" name="link" type="url" inputmode="url" placeholder="https://…">
+      </div>
+
+      <div class="field">
+        <label for="p-file">Excel file <span class="hint" id="file-hint">(optional)</span></label>
+        <input id="p-file" name="file" type="file" accept=".xlsx,.xlsm,.xls,.csv">
+      </div>
+
+      <p class="form-error" id="form-error" role="alert"></p>
+
+      <div class="form-actions">
+        <button type="button" class="btn btn-ghost" id="cancel-project">Cancel</button>
+        <button type="submit" class="btn btn-primary" id="submit-project">Save project</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
